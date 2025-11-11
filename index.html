@@ -297,12 +297,22 @@
 
         .project-image {
             height: 200px;
-            background: var(--gradient);
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.5rem;
+            position: relative;
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
         }
 
         .project-content {
@@ -622,10 +632,9 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Técnico en Sistemas & Analista de Datos</h3>
-                    <p>Soy un profesional técnico con sólidos conocimientos en sistemas y análisis de datos. Aunque no completé la ingeniería, cursé 4 semestres que me proporcionaron una base sólida en lógica de programación y resolución de problemas técnicos."
-
-"Mi expertise se centra en la automatización de procesos, creación de reportes dinámicos y optimización de flujos de trabajo mediante herramientas como Excel avanzado, Power BI, Power Query y Google Sheets. Tengo capacidad para desarrollar scripts y soluciones personalizadas que mejoran la eficiencia operativa.</p>
-                    <p>Mi valor diferencial está en mi capacidad para entender necesidades empresariales y traducirlas en soluciones técnicas prácticas y eficientes. Combino conocimientos técnicos con una mentalidad analítica para entregar resultados que impactan positivamente en la productividad y toma de decisiones."</p>
+                    <p>Soy un profesional técnico con sólidos conocimientos en sistemas y análisis de datos. Aunque no completé la ingeniería, cursé 4 semestres que me proporcionaron una base sólida en lógica de programación y resolución de problemas técnicos.</p>
+                    <p>Mi expertise se centra en la automatización de procesos, creación de reportes dinámicos y optimización de flujos de trabajo mediante herramientas como Excel avanzado, Power BI, Power Query y Google Sheets. Tengo capacidad para desarrollar scripts y soluciones personalizadas que mejoran la eficiencia operativa.</p>
+                    <p>Mi valor diferencial está en mi capacidad para entender necesidades empresariales y traducirlas en soluciones técnicas prácticas y eficientes. Combino conocimientos técnicos con una mentalidad analítica para entregar resultados que impactan positivamente en la productividad y toma de decisiones.</p>
                     <div class="skills">
                         <span class="skill">Excel Avanzado & Power Query</span>
                         <span class="skill">Power BI & Análisis de Datos</span>
@@ -654,19 +663,19 @@
                 <p>Una selección de mis trabajos más recientes y destacados</p>
             </div>
             <div class="projects-grid">
-                <!-- Proyecto 1 -->
+                <!-- Proyecto 1 - GPS -->
                 <div class="project-card fade-in">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
+                    <div class="project-image" style="background-image: url('https://github.com/jorge-montoya-arias/Portafolio/blob/main/gps.png');">
                     </div>
                     <div class="project-content">
                         <h3>Sistema de Monitoreo GPS para Flota Empresarial</h3>
                         <p>Solución tecnológica desarrollada para optimizar la gestión de transporte interno en empresas con operaciones en aeropuertos. La plataforma permite al personal en tierra visualizar en tiempo real la ubicación de los vehículos de la compañía y calcular tiempos estimados de recogida.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Html</span>
-                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">HTML</span>
                             <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">Diseño grafico</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Geolocalización</span>
+                            <span class="project-tag">Leaflet Maps</span>
                         </div>
                         <a href="#" class="project-link">
                             Ver Proyecto <i class="fas fa-arrow-right"></i>
@@ -676,17 +685,18 @@
 
                 <!-- Proyecto 2 -->
                 <div class="project-card fade-in delay-1">
-                    <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
+                    <div class="project-image" style="background: var(--gradient);">
+                        <i class="fas fa-chart-bar" style="z-index: 1; color: white; font-size: 3rem;"></i>
                     </div>
                     <div class="project-content">
-                        <h3>E-commerce Platform</h3>
-                        <p>Tienda online completa con carrito de compras, pasarela de pago, panel de administración y sistema de recomendaciones.</p>
+                        <h3>Sistema de Análisis de Datos con Power BI</h3>
+                        <p>Plataforma de business intelligence que consolida múltiples fuentes de datos para generar reportes automatizados y dashboards interactivos que facilitan la toma de decisiones estratégicas.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Vue.js</span>
-                            <span class="project-tag">Express</span>
-                            <span class="project-tag">PostgreSQL</span>
-                            <span class="project-tag">Stripe</span>
+                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag">Power Query</span>
+                            <span class="project-tag">Excel</span>
+                            <span class="project-tag">DAX</span>
+                            <span class="project-tag">SQL</span>
                         </div>
                         <a href="#" class="project-link">
                             Ver Proyecto <i class="fas fa-arrow-right"></i>
@@ -696,17 +706,18 @@
 
                 <!-- Proyecto 3 -->
                 <div class="project-card fade-in delay-2">
-                    <div class="project-image">
-                        <i class="fas fa-mobile-alt"></i>
+                    <div class="project-image" style="background: var(--gradient);">
+                        <i class="fas fa-cogs" style="z-index: 1; color: white; font-size: 3rem;"></i>
                     </div>
                     <div class="project-content">
-                        <h3>App de Gestión de Tareas</h3>
-                        <p>Aplicación móvil para gestión de proyectos y tareas con sincronización en la nube, notificaciones y colaboración en equipo.</p>
+                        <h3>Automatización de Reportes con Google Sheets</h3>
+                        <p>Solución completa de automatización que conecta múltiples fuentes de datos con Google Sheets mediante scripts personalizados, generando reportes ejecutivos automáticamente y enviándolos por email.</p>
                         <div class="project-tags">
-                            <span class="project-tag">React Native</span>
-                            <span class="project-tag">Firebase</span>
-                            <span class="project-tag">Redux</span>
-                            <span class="project-tag">Push Notifications</span>
+                            <span class="project-tag">Google Apps Script</span>
+                            <span class="project-tag">Google Sheets</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">API Integration</span>
+                            <span class="project-tag">Automation</span>
                         </div>
                         <a href="#" class="project-link">
                             Ver Proyecto <i class="fas fa-arrow-right"></i>
@@ -857,8 +868,4 @@
         });
     </script>
 </body>
-
 </html>
-
-
-
